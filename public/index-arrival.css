@@ -1,0 +1,83 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.arrival{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#arrivalProfilePic{
+    width: 15%;
+    position: relative;
+    left: 42%;
+    top: 25vh;
+    border-radius: 50%;
+    height: 35vh;
+    position: absolute;
+    animation: glow .3s infinite alternate;
+}
+
+
+@keyframes glow {
+    from {
+    box-shadow: 0 0 20px -15px #ff0000;
+    }
+    to {
+    box-shadow: 0 0 5px 15px #8484d1;
+    }
+}
+
+/* Arrow */
+.arrow {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    transform: rotate(65deg);
+    position: relative;
+    left: 15%;
+    top: 5vh;
+}
+
+.arrow .curve {
+	border: 10px solid #318ba1;
+	border-color: transparent transparent transparent #318ba1;
+	height: 365px;
+	width: 500px;
+	border-radius: 230px 0 0 150px;
+}
+
+.arrow .point {
+	position: absolute;
+	left: 30px;
+	top: 310px;
+    transform:rotate(12deg);
+	-webkit-transform: rotate(12deg);
+    -moz-transform:rotate(12deg);
+    -ms-transform: rotate(12deg);
+}
+
+.arrow .point:before, .arrow .point:after {
+	border: 15px solid #318ba1;
+	height: 55px;
+	content: "";
+	position: absolute;
+}
+
+.arrow .point:before {
+	top: -11px;
+	left: -11px;
+	transform:rotate(-74deg);
+	-webkit-transform:rotate(-74deg);
+    -moz-transform:rotate(-74deg);
+    -ms-transform: rotate(-74deg);
+}
+
+.arrow .point:after {
+    top: -20px;
+	left: 5px;
+	transform:rotate(12deg);
+	-webkit-transform: rotate(12deg);
+    -moz-transform:rotate(12deg);
+    -ms-transform: rotate(12deg);
+}

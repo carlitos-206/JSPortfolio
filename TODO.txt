@@ -5,8 +5,9 @@ Due Date: March 24th 2022
 				Requirements
 
 		1. Must Be interactie (i.e. event listeners) 
-
-		2. Must have 4-6 of the fallowing:
+				->[Y] Event Type: Click
+		
+		2. Must have 4-6 of the fallowing: [COUNT: 1]
 			
 			[] 1 or more classes
 				->[] Static Method
@@ -17,8 +18,8 @@ Due Date: March 24th 2022
 				->[] try {npm nodet try{ npm browser}} catch{lib}
 
 			[] 1 or more timing functions
-				->[] setInterval() or setTimeiot()
-
+				->[Y] setInterval() or setTimeout()
+						-> setTimeout()
 			[] 1 or more API fetch() to a 3rd party API 
 				->[] Is there API KEY
 					y: 

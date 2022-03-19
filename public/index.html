@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-arrival.css">
+    <link rel="stylesheet" href="index-baseProfile.css">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- to edit bootstrap it must be done on the html file -->
+    <style>
+        .card{
+            border-radius: 5%;
+        }
+        .card, .list-group, .list-group-item{
+            background-color: rgba(255, 255, 255, .15);  
+            
+        }
+    </style>
+    <!-- IG API -->
+    <script src="igAPI.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+
+    <title>Carlitos</title>
+</head>
+<body style="background-color: aquamarine;">
+    
+    <!-- This is for arrival -->
+    <div class="arrivalDIV">
+        <!-- Arrow -->
+        <div class="arrow" style="display: none;">
+            <div class="curve"></div>
+            <div class="point"></div>
+        </div> 
+        <!-- Profile IMG  -->
+        <img id="arrivalProfilePic" src="/img/bio.jpg" alt="Profile IMG">
+    </div>
+    
+    <!-- THIS IS THE BASE PROFILE -->
+    <div class="baseProfile" style="display: none;">
+        <div class="contact-card">
+            <!-- THIS IS THE BOOTSTRAP MODULE  -->
+            <div class="card" style="width: 18rem;">
+                <img src="/img/floating-me.gif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Carlos R. Caceres Martinez</h5>
+                    <h6>About Me:</h6>
+                    <p>I am a gradute of the Coding Dojo in Bellevue, Wa. In my time there I accuquired a Full Stack Python Certification</p>
+                    <p>I am also a current student at the University of Washington where I am pursuing a Full Stack JavaScript Certification</p>
+                    
+                    <!-- <p>I have the ability to create Web Applictions using Python's framework Django 2.2 with Object Relational Mapper (ORM) and deploy them on AWS EC2 Virtual Machine's using Linux Ubuntu 18.04 LTS servers. I consider myself to be creative and attentive to detail, reason why have been able to enjoy CSS as a Front-End language and naturally dive into some of the CSS frameworks.</p>
+                        <p>I also have comprehension of JavaScript as well as the JQuery library. I can also say that I feel confident in my relational database building and mainting using MySQL and it's workbench as well as the Python shell in ORM. As for version control, I am proeficient in Git Hub and the Git Bash Shell.</p>
+                        <p>I also feel confident using Windows OS, MacOS and Linux Ubuntu OS. I personally enjoy being able to use any computer that's handed to me and begin to work. This was a skill that was proven usefull when it came to group work while at school. It became easy for me to aide my class mates and advance with our projects with ease.</p>
+                        <p>Currently, I have been granted a technical preview of GitHub Copilot. I will be exploring into how to incorporate this tool and whether is useful for students.</p>
+                        <p>As for my future, I will start a second bootcamp at the University of Washington on January 2022. There I intend to get a second full stack certification but this time JavaScript. There I hope to master React and MongoDB in their MERN stack.</p>
+                    -->
+                    <a href="#" style="display: flex; justify-content:flex-end;">Read More</a>
+                    <h6>Skills</h6>
+                    <div class="list-1">
+                        <ul>
+                            
+                            <li class="category">FRONT-END</li>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS</li>
+                                <ul>
+                                    <li>Vanilla CSS</li>
+                                    <li>BootStrap</li>
+                                    <li>Pure CSS</li>
+                                    <li>Animate CSS</li>
+                                </ul>
+                                <li>JavaScript</li>
+                                <ul>
+                                    <li>Vanilla JS</li>
+                                    <li>JQuery</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                        </div>
+                            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <li class="category">BACK-END</li>
+                                    <ul>
+                                        <li>Python3</li>
+                                        <ul>
+                                            <li>Django 2.2 + ORM</li>
+                                            <li>Flask 2.2 + MySQL</li>
+                                        </ul>
+                                        <li>JavaScript ES6</li>
+                                            <ul>
+                                                <li>Node.JS</li>
+                                                <li>Express</li>
+                                            </ul>
+                                    </ul>
+                                    <li class="category">DATABASE MANAGEMENT</li>
+                                            <ul>
+                                                <li>Relational</li>
+                                                <ul>
+                                                    <li>MySQL</li>
+                                                </ul>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-2">
+                                        <ul>
+                                            <li class="category" >VERSION CONTROL</li>
+                                            <ul>
+                                                <li>Git Hub</li>
+                                            </ul>
+                                                <li class="category">DEPLOYMENT</li>
+                                                <ul>
+                                                    <li>AWS EC2 Virtual Machine</li>
+                                                    <ul>
+                                                        <li>Ubuntu 18.04LTS</li>
+                                                    </ul>
+                                                </ul>
+                                                <li class="category" >OS / SHELLS</li>
+                                                <ul>
+                                                    <li>Linux</li>
+                                                    <ul>
+                                                        <li>Ubuntu 20.04LTS</li>
+                                                    </ul>
+                                                    <li>OS X</li>
+                                                    <ul>
+                                                        <li>Git Bash Shell</li>
+                                                        <li>Mac OS</li>
+                                                        </ul>
+                                                    <li>Windows</li>
+                                                </ul>
+                                                <p><a id="resume-pdf" href="#" download>DOWNLOAD FULL RESUME</a></p>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                </div>
+                        <div class="card-header" id="headingOne">
+                            <a href= "#" id="btn-text" style="display: flex; justify-content:flex-end;">Load More</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-link"  style="display: flex; justify-content:center;">Send Direct Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- This is the script for UW Course 1: PROGRAMMING FOR THE BROWSER WITH JAVASCRIPT REG # 198491 -->
+    <script src="uwReqs.js"></script>
+    <script>
+        
+    </script>
+    </html>
