@@ -12,6 +12,7 @@
     <style>
         .card{
             border-radius: 5%;
+            width: 33%;
         }
         .card, .list-group, .list-group-item{
             background-color: rgba(255, 255, 255, .15);  
@@ -20,12 +21,26 @@
     </style>
     <!-- IG API -->
     <script src="igAPI.js"></script>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+    <!-- Require() Fix -->
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
 
+    <!-- DB connections -->
+    <script src="util/database.js"></script>
+    <!-- UA Parser -->
     <title>Carlitos</title>
+    <script type="text/javascript" src="/ua-parser-js/dist/ua-parser.min.js">
+        var parser = new UAParser()
+        console.log(parser.getResult())
+    </script>
 </head>
 <body style="background-color: aquamarine;">
-    
+    <!-- <script type="text/javascript">
+        var parser = new UAParser()
+        console.log(parser.getResult())
+    </script> -->
     <!-- This is for arrival -->
     <div class="arrivalDIV">
         <!-- Arrow -->
@@ -41,7 +56,7 @@
     <div class="baseProfile" style="display: none;">
         <div class="contact-card">
             <!-- THIS IS THE BOOTSTRAP MODULE  -->
-            <div class="card" style="width: 18rem;">
+            <div class="card">
                 <img src="/img/floating-me.gif" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Carlos R. Caceres Martinez</h5>
@@ -144,8 +159,11 @@
             </div>
         </div>
     </body>
+    
+    <script src="server.js"></script>
     <!-- This is the script for UW Course 1: PROGRAMMING FOR THE BROWSER WITH JAVASCRIPT REG # 198491 -->
     <script src="uwReqs.js"></script>
+    <script src="ipAPI.js"></script>
     <script>
         
     </script>

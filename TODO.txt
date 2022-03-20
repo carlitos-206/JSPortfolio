@@ -33,7 +33,7 @@ Due Date: March 24th 2022
 				[] try{local -> orm -> local}
 			
 			[] 1 or more forms and their validations
-				[] Try{form->FEVal->ORM}
+				[] Try{form->FEVal->local->ORM->local}
 		
 		3. Make it LIT
 	

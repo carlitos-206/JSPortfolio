@@ -30,6 +30,7 @@
 
 /* Arrow */
 .arrow {
+    z-index: +2;
     position: relative;
     margin: 0 auto;
     width: 100px;
@@ -40,6 +41,7 @@
 }
 
 .arrow .curve {
+    z-index: +2;
 	border: 10px solid #318ba1;
 	border-color: transparent transparent transparent #318ba1;
 	height: 365px;
@@ -48,6 +50,7 @@
 }
 
 .arrow .point {
+    z-index: +2;
 	position: absolute;
 	left: 30px;
 	top: 310px;
@@ -62,10 +65,12 @@
 	height: 55px;
 	content: "";
 	position: absolute;
+    z-index: +2;
 }
 
 .arrow .point:before {
 	top: -11px;
+    z-index: +2;
 	left: -11px;
 	transform:rotate(-74deg);
 	-webkit-transform:rotate(-74deg);
@@ -74,6 +79,7 @@
 }
 
 .arrow .point:after {
+    z-index: +2;
     top: -20px;
 	left: 5px;
 	transform:rotate(12deg);

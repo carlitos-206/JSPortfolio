@@ -14,9 +14,15 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 
 
-
-
+const get_ip = require('ipware')().get_ip;
+app.use(function(req, res, next) {
+    const ip_info = get_ip(req);
+    console.log(ip_info);
+    // { clientIp: '127.0.0.1', clientIpRoutable: false }
+    next();
+})
 app.get('/', (request, response, next) => (
+    
     response.render('index')
 ))
 
