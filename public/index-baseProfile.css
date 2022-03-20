@@ -1,0 +1,11 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.contact-card{
+    width: fit-content;
+    position: relative;
+    top: 1vh;
+    left: 2.5%;
+    height: fit-content;
+}

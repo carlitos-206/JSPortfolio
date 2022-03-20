@@ -1,0 +1,35 @@
+{
+  "name": "jsportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "uwReqs.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlitos-206/JSPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlitos-206/JSPortfolio/issues"
+  },
+  "homepage": "https://github.com/carlitos-206/JSPortfolio#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "ip": "^1.1.5",
+    "ipware": "^2.0.0",
+    "mysql2": "^2.3.3",
+    "request-promise": "^4.2.6",
+    "sequelize": "^6.17.0",
+    "sqlite3": "^4.2.0",
+    "ua-parser-js": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
