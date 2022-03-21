@@ -9,3 +9,46 @@
     left: 2.5%;
     height: fit-content;
 }
+
+.connectionPoints{
+    left: 22.5%;
+    width: fit-content;
+    bottom: 820px;
+    position: sticky;
+}
+#socialMediaCard{
+    width: 45%;
+    border-radius: 5%;
+    left: 21%;
+    display: flex;
+    justify-content: center;
+}
+#card1Header{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center ;
+}
+.card-body{
+    padding: 10%;
+}
+#linkLogo{
+    width: 5%;
+}
+#gitLogo{
+    width: 6%;
+}
+#soLogo{
+    width: 5%;
+}
+#igLogo{
+    width: 5%;
+}
+#igHREF{
+    position: relative;
+    left: .5%;
+}
+#ytLogo{
+    width: 10%;
+}

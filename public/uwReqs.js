@@ -7,9 +7,21 @@ const carusel_btn = document.getElementById('btn-text')
 // This function checks the screen dimensions
 const screenSettting = ()=>{
     // if the screen is the less than 1024px Don't allow access
-    if(screen.width<1024){
-        alert("Please Use a Desktop to view this site. Mobile Version under Development")
+    if(screen.width<1920){
+        alert(`
+        Your Screen is ${screen.width}px wide and ${screen.height}px height.
+        This site is best viewed on a 1920px wide and 1080px height.
+        Please resize your screen to view this site.
+                or
+        Click OK to continue.
+        
+        Other screens will be supported in the future.`)
+        arrow.setAttribute('style', 'display: none')
+        arrivalDIV.setAttribute('style', 'display:none')
+        baseProfile.setAttribute('style', 'display:block')
+
     }else{
+        
         // the screen is a desktop size, loads .baseProfile and removes .arrivalDiv
         
         // edgecase if the timer overturns arrow
