@@ -7,10 +7,12 @@ const express = require('express')
 // Creatting the server
 const app = express()
 
-// rendering static files
+// rendering static files / best pratice to use the public folder #so far
 app.use(express.static('public'))
 
 // this is the view engine... ejs is the closest to html format
+// this line has been depricated with line 11
+// just keeping it for reference
 app.set('view engine', 'ejs')
 
 

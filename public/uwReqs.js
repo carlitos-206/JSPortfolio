@@ -3,7 +3,9 @@ const arrow = document.getElementsByClassName('arrow')[0]
 const arrivalDIV = document.getElementsByClassName('arrivalDIV')[0]
 const baseProfile = document.getElementsByClassName('baseProfile')[0]
 const carusel_btn = document.getElementById('btn-text')
-
+const fish = document.getElementById('fishGIF')
+const lofiMusic = document.getElementById("lofiMusic")
+const iframe = document.querySelector('iframe')
 // This function checks the screen dimensions
 const screenSettting = ()=>{
     // if the screen is the less than 1024px Don't allow access
@@ -12,14 +14,14 @@ const screenSettting = ()=>{
         Your Screen is ${screen.width}px wide and ${screen.height}px height.
         This site is best viewed on a 1920px wide and 1080px height.
         Please resize your screen to view this site.
+            1920px wide and 930px height using DevTools.
                 or
-        Click OK to continue.
+        Click OK to continue (just don't mind the poor UI).
         
         Other screens will be supported in the future.`)
         arrow.setAttribute('style', 'display: none')
         arrivalDIV.setAttribute('style', 'display:none')
         baseProfile.setAttribute('style', 'display:block')
-
     }else{
         
         // the screen is a desktop size, loads .baseProfile and removes .arrivalDiv
@@ -61,6 +63,17 @@ carusel_btn.addEventListener('click', (e)=>{
 })
 
 
+// Fish GIF for lofi music
+const lofi = (e)=>{
+    if(lofiMusic.getAttribute('src') === "https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&mute=1"){
+        lofiMusic.setAttribute('src', 'https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&mute=0')
+    }else{
+        lofiMusic.setAttribute('src', 'https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&mute=1')
+    }
+}
+
+fish.addEventListener('click', (e)=>{lofi()}) 
+
 
 // these two functions a JQuery Dependent they require the CDN to be loaded before the 
 // the script excecutes ... both functions serve the same pourpose but its one fail safe if
@@ -69,15 +82,29 @@ carusel_btn.addEventListener('click', (e)=>{
 
 //function 1  
 $.getJSON("https://api.ipify.org?format=json", function(data) {
-    console.log('function 1: ',data.ip, data)})
+    console.log('function 1: ',data.ip, data, data.city)})
 
 // function 2 <-- Fastest
-$.get("https://ipinfo.io", function(response) {
+// async function theWeather(){
+//     const response = await fetch('https://api.ipify.org?format=json')
+//     const data = await response.json()
+//     console.log('function 3: ',data.ip, data, data.city)
+// }
+const test = $.get("https://ipinfo.io", function(response) {
     let ip2 = response.ip
-   console.log('function 2: ', ip2, response)
+   console.log('function 2: ', ip2, response, response.city)
 }, "json")
 
 
+let city = 'Los Angeles'
+url = `https://weatherdbi.herokuapp.com/data/weather/${city}`
+console.log(url)
+fetch(url)
+    .then(res=>res.json())
+    .then(json=>console.log(json))
+.catch((response) => {
+  console.log(response)
+})
 
 // Local Storage Creation
 

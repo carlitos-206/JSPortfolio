@@ -17,7 +17,7 @@ Due Date: March 24th 2022
 			[] Unit Testing: Jasmine Library
 				->[] try {npm nodet try{ npm browser}} catch{lib}
 
-			[] 1 or more timing functions
+			[Y] 1 or more timing functions
 				->[Y] setInterval() or setTimeout()
 						-> setTimeout()
 			[] 1 or more API fetch() to a 3rd party API 
