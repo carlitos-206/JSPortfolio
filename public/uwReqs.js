@@ -1,3 +1,5 @@
+const { response } = require("express")
+
 const arrivalProfilePic = document.getElementById('arrivalProfilePic')
 const arrow = document.getElementsByClassName('arrow')[0]
 const arrivalDIV = document.getElementsByClassName('arrivalDIV')[0]
@@ -64,6 +66,7 @@ carusel_btn.addEventListener('click', (e)=>{
 
 
 // Fish GIF for lofi music
+
 const lofi = (e)=>{
     if(lofiMusic.getAttribute('src') === "https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&mute=1"){
         lofiMusic.setAttribute('src', 'https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&mute=0')
@@ -71,8 +74,7 @@ const lofi = (e)=>{
         lofiMusic.setAttribute('src', 'https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&mute=1')
     }
 }
-
-fish.addEventListener('click', (e)=>{lofi()}) 
+fish.addEventListener('click', (e)=>{lofi() }) 
 
 
 // these two functions a JQuery Dependent they require the CDN to be loaded before the 
@@ -85,15 +87,23 @@ $.getJSON("https://api.ipify.org?format=json", function(data) {
     console.log('function 1: ',data.ip, data, data.city)})
 
 // function 2 <-- Fastest
-// async function theWeather(){
-//     const response = await fetch('https://api.ipify.org?format=json')
-//     const data = await response.json()
-//     console.log('function 3: ',data.ip, data, data.city)
-// }
-const test = $.get("https://ipinfo.io", function(response) {
-    let ip2 = response.ip
-   console.log('function 2: ', ip2, response, response.city)
-}, "json")
+async function theWeather(){
+    const thisTest = new Promise((resolve, reject)=>{
+        let test = $.get("https://ipinfo.io", function(response) {
+            let ip2 = response.ip
+            console.log('function 3: ', ip2, response, response.city)
+            return response}, "json").then(
+                resolve(response)
+            )
+
+    })
+console.log('hrere', thisTest)
+}
+theWeather()
+// const test = $.get("https://ipinfo.io", function(response) {
+//     let ip2 = response.ip
+//    console.log('function 2: ', ip2, response, response.city)
+// }, "json")
 
 
 let city = 'Los Angeles'
@@ -101,9 +111,9 @@ url = `https://weatherdbi.herokuapp.com/data/weather/${city}`
 console.log(url)
 fetch(url)
     .then(res=>res.json())
-    .then(json=>console.log(json))
+    .then(json=>console.log('hrer',json.next_days))
 .catch((response) => {
-  console.log(response)
+  console.log(response.next_days)
 })
 
 // Local Storage Creation
