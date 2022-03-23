@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/me_icon.svg">
-    <!-- CSS Scrips Custom -->
+    <!-- CSS Scripts Custom -->
     <link  rel="stylesheet" href="index-arrival.css">
     <link rel="stylesheet" href="index-baseProfile.css">
     <!-- BootStrap -->
@@ -31,20 +31,16 @@
     </style>
     <!-- IG API -->
     <script src="igAPI.js"></script>
-    <!-- JQuery -->
+    <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Require() Fix -->
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
     <!-- animate.css Framework -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- DB connections -->
+    <!-- DB connections #not working only keeping for future reference-->
     <script src="util/database.js"></script>
-    <!-- UA Parser -->
-    <script type="text/javascript" src="/ua-parser-js/dist/ua-parser.min.js">
-        //failed to load ua-parser, using default
-        var parser = new UAParser()
-        console.log(parser.getResult())
-    </script>
+    <!-- UA Parser Script(SCRIPT MUST BE AT SAME LEVEL AS HTML) but also requires npm zepto we can parse the info in the uwReqs.js script with JQuery-->
+    <script type="text/javascript" src="ua-parser.min.js"></script>
     <title>Carlitos</title>
 </head>
 <body>
@@ -101,7 +97,7 @@
                             </ul>
                             </div>
                                 <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="card-body">
+                                    <div class="">
                                         <li class="category">BACK-END</li>
                                         <ul>
                                             <li>Python3</li>
@@ -122,20 +118,19 @@
                                                     </ul>
                                                 </ul>
                                             </ul>
-                                        </div>
-                                        <ul class="list-2">
-                                            <ul>
-                                                <li class="category" >VERSION CONTROL</li>
+                                            <ul class="list-2">
                                                 <ul>
-                                                    <li>Git Hub</li>
-                                                </ul>
+                                                    <li class="category" >VERSION CONTROL</li>
+                                                    <ul>
+                                                        <li>Git Hub</li>
+                                                    </ul>
                                                     <li class="category">DEPLOYMENT</li>
                                                     <ul>
                                                         <li>AWS EC2 Virtual Machine</li>
                                                         <ul>
                                                             <li>Ubuntu 18.04LTS</li>
                                                         </ul>
-                                                        <li>Testing Live APP (Pre-Productio)</li>
+                                                        <li>Testing Live APP (Pre-Production)</li>
                                                         <ul>
                                                             <li>NGROK</li>
                                                         </ul>
@@ -156,28 +151,29 @@
                                                             <li>Command Prompt</li>
                                                         </ul>
                                                     </ul>
-                                        <ul>
-                                            <li>OTHER</li>
-                                            <ul>
-                                                <li>Video Edeting</li>
-                                                <ul>
-                                                    <li>Learning: Adobe Premiere Pro</li>
-                                                </ul>
-                                                <li>Photo Editing</li>
-                                                <ul>
-                                                    <li>Adobe Light Room</li>
-                                                </ul>
-                                                <li>Drawing/Icon Making</li>
                                                     <ul>
-                                                        <li>Adobe Illustrator</li>
+                                                        <li>OTHER</li>
+                                                        <ul>
+                                                            <li>Video Editing</li>
+                                                            <ul>
+                                                                <li>Learning: Adobe Premiere Pro</li>
+                                                            </ul>
+                                                            <li>Photo Editing</li>
+                                                            <ul>
+                                                                <li>Adobe Light Room</li>
+                                                            </ul>
+                                                            <li>Drawing/Icon Making</li>
+                                                            <ul>
+                                                                <li>Adobe Illustrator</li>
+                                                            </ul>
+                                                        </ul>
                                                     </ul>
-                                            </ul>
-                                        </ul>
                                                     <p><a id="resume-pdf" href="#" download>DOWNLOAD FULL RESUME</a></p>
                                                 </ul>
                                             </ul>
                                         </ul>
                                     </div>
+                                </div>
                             <div class="card-header" id="headingOne">
                                 <a href= "#" id="btn-text" style="display: flex; justify-content:flex-end;">Load More</a>
                             </div>

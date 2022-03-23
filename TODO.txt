@@ -20,14 +20,14 @@ Due Date: March 24th 2022
 			[Y] 1 or more timing functions
 				->[Y] setInterval() or setTimeout()
 						-> setTimeout()
-			[] 1 or more API fetch() to a 3rd party API 
+			[Y] 1 or more API fetch() to a 3rd party API 
 				->[] Is there API KEY
 					y: 
 					    [] API KEY MUST BE TESTED 3 SEPERATE TIMES WITH DIFF PARAMS   
 					    [] Send API KEY to Professor
 					
 					n: 
-					    [] TEST KEYLESS 3 SEPERATE TIMES WITH DIFF PARAMS
+					    [Y] TEST KEYLESS 3 SEPERATE TIMES WITH DIFF PARAMS
 			
 			[] Sets, Updates or Changes to Local Storage
 				[] try{local -> orm -> local}

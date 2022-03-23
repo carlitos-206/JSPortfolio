@@ -1,5 +1,3 @@
-const { response } = require("express")
-
 const arrivalProfilePic = document.getElementById('arrivalProfilePic')
 const arrow = document.getElementsByClassName('arrow')[0]
 const arrivalDIV = document.getElementsByClassName('arrivalDIV')[0]
@@ -65,7 +63,7 @@ carusel_btn.addEventListener('click', (e)=>{
 })
 
 
-// Fish GIF for lofi music
+// Click Fish GIF for lofi music (Easter Egg)
 
 const lofi = (e)=>{
     if(lofiMusic.getAttribute('src') === "https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&mute=1"){
@@ -77,44 +75,56 @@ const lofi = (e)=>{
 fish.addEventListener('click', (e)=>{lofi() }) 
 
 
-// these two functions a JQuery Dependent they require the CDN to be loaded before the 
-// the script excecutes ... both functions serve the same pourpose but its one fail safe if
-// one service doesnt work
-//src = https://www.geeksforgeeks.org/how-to-get-client-ip-address-using-javascript/
+
+// // these two functions a JQuery Dependent they require the CDN to be loaded before the 
+// // the script excecutes ... both functions serve the same pourpose but its one fail safe if
+// // one service doesnt work
+// //src = https://www.geeksforgeeks.org/how-to-get-client-ip-address-using-javascript/
 
 //function 1  
 $.getJSON("https://api.ipify.org?format=json", function(data) {
-    console.log('function 1: ',data.ip, data, data.city)})
+    console.log(data)})
 
-// function 2 <-- Fastest
-async function theWeather(){
-    const thisTest = new Promise((resolve, reject)=>{
-        let test = $.get("https://ipinfo.io", function(response) {
-            let ip2 = response.ip
-            console.log('function 3: ', ip2, response, response.city)
-            return response}, "json").then(
+const mainPromise = new Promise((resolve, reject)=>{
+        $.get("https://ipinfo.io", function(response) { 
+            if(response){
                 resolve(response)
-            )
-
+            }else{
+                reject("Seattle")
+            }
+        }, "json")
     })
-console.log('hrere', thisTest)
-}
-theWeather()
-// const test = $.get("https://ipinfo.io", function(response) {
-//     let ip2 = response.ip
-//    console.log('function 2: ', ip2, response, response.city)
-// }, "json")
 
-
-let city = 'Los Angeles'
-url = `https://weatherdbi.herokuapp.com/data/weather/${city}`
-console.log(url)
-fetch(url)
-    .then(res=>res.json())
-    .then(json=>console.log('hrer',json.next_days))
-.catch((response) => {
-  console.log(response.next_days)
+mainPromise
+    .then((message)=>{
+        let city = message.city
+        let url = `https://weatherdbi.herokuapp.com/data/weather/${city}`
+        console.log(url)
+        fetch(url)
+            .then(res=>res.json())
+            .then(json=>console.log('hrer',json.next_days))
+            .catch((response) => {
+            console.log(response.next_days)
+                })
+    }).catch((message)=>{
+            let city = message
+            let url = `https://weatherdbi.herokuapp.com/data/weather/${city}`
+            console.log(url)
+            fetch(url)
+            .then(res=>res.json())
+            .then(json=>console.log('hrer',json.next_days))
+            .catch((response) => {
+                console.log(response.next_days)
+            })
 })
+
+// console.log('ipsolution', test)
+// console.log('ipsolution2', test.readyState)
+// console.log('ipsolution3', test.getResponseHeader)
+// console.log('ipsolution3', test.getAllResponseHeaders)
+
+
+
 
 // Local Storage Creation
 
@@ -140,3 +150,7 @@ class uaInfo extends RequestInfo{
         this.device = device
     }
 }
+
+$.ua.set(navigator.userAgent)
+console.log('test', $.ua.os);   
+console.log(navigator.userAgent)

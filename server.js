@@ -4,6 +4,7 @@
 
 // This is the library I am using to build the server
 const express = require('express')
+const parser = require('ua-parser-js');
 // Creatting the server
 const app = express()
 
@@ -19,7 +20,8 @@ app.set('view engine', 'ejs')
 const get_ip = require('ipware')().get_ip;
 app.use(function(req, res, next) {
     const ip_info = get_ip(req);
-    console.log(ip_info);
+    let ua = parser(req.headers['user-agent'])
+    console.log(ip_info, ua);
     // { clientIp: '127.0.0.1', clientIpRoutable: false }
     next();
 })
