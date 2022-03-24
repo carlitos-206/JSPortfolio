@@ -8,6 +8,7 @@
     <!-- CSS Scripts Custom -->
     <link  rel="stylesheet" href="index-arrival.css">
     <link rel="stylesheet" href="index-baseProfile.css">
+    <link rel="stylesheet" href="validation.css">
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- to edit bootstrap some time only works on the html file -->
@@ -37,6 +38,8 @@
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
     <!-- animate.css Framework -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Tailwind CSS Conflicts with BootStrap-->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- DB connections #not working only keeping for future reference-->
     <script src="util/database.js"></script>
     <!-- UA Parser Script(SCRIPT MUST BE AT SAME LEVEL AS HTML) but also requires npm zepto we can parse the info in the uwReqs.js script with JQuery-->
@@ -79,7 +82,7 @@
                                     <li style="position: relative; left: 5%">CSS</li>
                                     <ul style="position: relative; left: 10%">
                                         <li>Vanilla CSS</li>
-                                        <li>BootStrap</li>
+                                        <li>Boot Strap</li>
                                         <li>Pure CSS</li>
                                         <li>Animate CSS</li>
                                         <li>Tailwind CSS</li>
@@ -180,7 +183,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="#" class="card-link"  style="display: flex; justify-content:center;">Send Direct Message</a>
+                            <a id="dmOpener" href="#" class="card-link"  style="display: flex; justify-content:center;">Send Direct Message</a>
                         </div>
                     </div>
                 </div>
@@ -226,7 +229,6 @@
                             <a href="https://github.com/carlitos-206/useragent-Django2.2" target="_blank" rel="noopener norerferrer"><button id="gitBtn2" type="button" class="btn btn-dark">useragent-Django2.2</button></a>
                             <a href="https://github.com/carlitos-206/js-browser-game-django" target="_blank" rel="noopener norerferrer"><button id="gitBtn3" type="button" class="btn btn-dark">js-browser-game-django</button></a>
                             <a href="https://github.com/carlitos-206/mainPortfolio" target="_blank" rel="noopener norerferrer"><button id="gitBtn4" type="button" class="btn btn-dark">mainPortfolio</button></a>
-                            
                             <p id="depricatedGIT">(Depricated)</p>
                         </div>
                         <div id="sourceCodeTHIS">
@@ -287,7 +289,7 @@
                 </div>
               </div>
               <h1></h1>
-              <h6>_vibe</h6>
+              <h6 style="position: relative; left: 1%;">&#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335; </h6>
           </div>
           <div class="weather">
             <h3 id="locationWeather"></h3>
@@ -312,6 +314,40 @@
                     </div>
                   </div>
               </div>
+          </div>
+          <div id="mainForm" class="dmForm card" style="display: none;">
+              <div class="card-body">
+                  <form style="position: relative; left:1%;" name="emailForm" id="theForm" action="#">
+                    <!-- in theory the CSRF token would be here -->
+                    <div class="form-group w-50">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" name="email" placeholder="name@example.com">
+                      </div>
+                      <div class="form-group w-50">
+                        <label for="exampleFormControlInput2">First Name</label>
+                        <input type="text" class="form-control" name="fname" placeholder="Enter First Name">
+                        <label for="exampleFormControlInput3">Last Name</label>
+                        <input type="text" class="form-control" name="lname"  placeholder="Enter Last Name">
+                      </div>
+                      <div class="form-group w-25">
+                        <label for="exampleFormControlSelect1">Reason For Contact</label>
+                        <select class="form-control" name="reasonField" >
+                          <option value="">Choose One</option>
+                          <option value="Job">Job Oppurtunity</option>
+                          <option value="Connection">Lets Connect</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message</label>
+                        <textarea class="form-control" rows="3" name="messageField"></textarea>
+                      </div>
+                    <button style="position:relative; bottom: .8em; left: 5%;" id="closeForm" type="button" class="btn btn-danger">Cancel</button>
+                    <button style="position:relative; bottom: .8em; left: 60%;" name="submitBTN" id ="submitForm" type="submit" class="btn btn-success">Send Message</button>
+                    </form>
+                    <iframe id="randomGIF"src="https://giphy.com/embed/tBm5R4qHDM2c0" width="480" height="408" frameBorder="0" ></iframe><p></p>
+
+              </div>
+                
           </div>
         <div class="footer">
             <h5>Thank You | <a id="topTag"href="#top">Back to Top</a></h5>

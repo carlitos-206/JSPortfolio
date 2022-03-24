@@ -9,7 +9,7 @@ Due Date: March 24th 2022
 		
 		2. Must have 4-6 of the fallowing: [COUNT: 1]
 			
-			[] 1 or more classes
+			[Y] 1 or more classes
 				->[] Static Method
 				->[] Protoype Method
 				->[] optional: if(classes>1){try extend classes}
@@ -29,10 +29,11 @@ Due Date: March 24th 2022
 					[x]n: 
 					    [Y] TEST KEYLESS 3 SEPERATE TIMES WITH DIFF PARAMS
 			
-			[] Sets, Updates or Changes to Local Storage
+			[Y] Sets, Updates or Changes to Local Storage
+				[y] Set
 				[] try{local -> orm -> local}
 			
-			[] 1 or more forms and their validations
+			[Y] 1 or more forms and their validations
 				[] Try{form->FEVal->local->ORM->local}
 		
 		3. Make it LIT

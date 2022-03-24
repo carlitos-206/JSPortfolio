@@ -205,3 +205,22 @@
     top: 1em;
     position: absolute;
 }
+
+.dmForm{
+    position: relative;
+    left: 30%;
+    top: -63em;
+    position: absolute;
+}
+#mainForm{
+    background-color: rgba(8, 0, 255, 0.41);  
+            backdrop-filter: blur(5px);
+}
+#randomGIF{
+    position: relative;
+    bottom: 11em;
+    left: 25%;
+    width: 72%;
+    z-index: -1;
+    position: absolute;
+}
