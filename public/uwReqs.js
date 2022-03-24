@@ -140,7 +140,7 @@ mainPromise
                 tomorrowIMG.setAttribute('src', json.next_days[1].iconURL)
                 tomorrowTemp.textContent = `${json.next_days[1].max_temp.f}F / ${json.next_days[0].max_temp.c}C `
                 tomorrowComment.textContent = json.next_days[1].comment
-                locationWeather.textContent = `location: ${message.city}`
+                locationWeather.textContent = `${message.city}`
             })
         })
     .catch((message)=>{
