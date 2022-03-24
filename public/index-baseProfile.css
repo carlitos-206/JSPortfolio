@@ -2,10 +2,225 @@
     margin: 0px;
     padding: 0px;
 }
+
 .contact-card{
     width: fit-content;
     position: relative;
     top: 1vh;
-    left: 2.5%;
+    left: 8.5%;
     height: fit-content;
+}
+.connectionPoints{
+    position: fixed;
+    left: 30%;
+    width: fit-content;
+    top: 1.5em;
+    width: 20%;
+}
+#socialMediaCard{
+    width: 100%;
+    border-radius: 2.5%;
+    display: flex;
+    justify-content: center;
+    animation: glow .3s infinite alternate;
+}
+
+
+@keyframes glow {
+    from {
+    box-shadow: 0 0 20px -15px #ff0000;
+    }
+    to {
+    box-shadow: 0 0 5px 15px #8484d1;
+    }
+}
+
+#card1Header{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0);  
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center ;
+}
+
+/* Img style do not move postion cause the href stays in place only the img moves */
+#gmailLogo{
+    width: 15%;
+}
+#linkLogo{
+    width: 10%;
+}
+#gitLogo ,#gitLogo2{
+    width: 10%;
+}
+#soLogo{
+    width: 10%;
+}
+#igLogo{
+    width: 10%;
+}
+#ytLogo{
+    width: 15%;
+}
+
+
+/* links href allows for movement with img, just dont resize cause only increases the size on the click listner not img */
+
+#gmailHREF{
+    position: relative;
+    left: 2%;
+}
+
+#igHREF{
+    position: relative;
+    left: .5%;
+}
+
+.connectionLinks{
+    position: relative;
+    left: 10%;
+    width: fit-content;
+}
+
+
+/* Fish Section */
+
+#moppingFish{
+    position: relative;
+    left: 35% ;
+    bottom: 10em;
+    width: fit-content;
+    position: absolute;
+}
+#wetSignGIF{
+    position: relative;
+    bottom: 15em;
+    width: 45%;
+    right: 10%;
+    z-index: -1;
+}
+
+
+/* Project Card */
+
+#projectCard{
+    position: relative;
+    bottom: 8em;
+    left: 32.5%;
+    width: 55%;
+    position: absolute;
+}
+#gitCard{
+    position: relative;
+    left: 45%;
+}
+
+#gitBtn1{
+    width: 5.5em;
+    border-radius: 5%;
+}
+#gitBtn2{
+    width: 11.5em;
+    border-radius: 5%;
+    position: relative;
+    left: 2.5%;
+}
+#gitBtn3{
+    width: 13em;
+    border-radius: 5%;
+    position: relative;
+    left: 5%;
+}
+#gitBtn4{
+    width: 8em;
+    border-radius: 5%;
+    position: relative;
+    left: 8%;
+}
+.projectBtns{
+    width:80%;
+    position: relative;
+    left: 15%;
+}
+#depricatedGIT{
+    position: relative;
+    left: 70%;
+}
+
+/* #sourceCodeTHIS{
+    position: relative;
+    top: 2em;
+    width: fit-content; */
+/* } */
+#sourceCodeTHIS{
+    display: flex;
+    justify-content: center;
+}
+.helloWorld{
+    position: relative;
+    left: 57%;
+    top: 4.5em;
+    position: absolute;
+}
+#welcomeTitle{
+    font-size: 12em;
+}
+
+#hobbiesCard{
+    position: absolute;
+    left: 32.5%;
+    width: 55%;
+    top: 55em;
+}
+#myArt, #chiArt{
+    width: 75%;
+    left: 10%;
+}
+
+#ytCard, #lightRoomCard{
+    position: relative;
+    left: 6.5%;
+}
+#ytVIDLast{
+    position: relative;
+    left: 10%;
+    top: 1em;
+}
+.footer{
+    position: relative;
+    top: 290em;
+    left: 50%;
+    position: absolute;
+}
+#myVid1, #myVid2, #myVid3{
+    position: relative;
+    left: 17%;
+}
+.weather{
+    width: 21em;
+    position: relative;
+    left: 81% ;
+    top: 1em;
+    position: absolute;
+}
+
+.dmForm{
+    position: relative;
+    left: 30%;
+    top: -63em;
+    position: absolute;
+}
+#mainForm{
+    background-color: rgba(8, 0, 255, 0.41);  
+            backdrop-filter: blur(5px);
+}
+#randomGIF{
+    position: relative;
+    bottom: 11em;
+    left: 25%;
+    width: 72%;
+    z-index: -1;
+    position: absolute;
 }
