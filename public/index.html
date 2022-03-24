@@ -56,7 +56,7 @@
     </div>
     
     <!-- THIS IS THE BASE PROFILE -->
-        <div class="baseProfile" style="display: none;">
+        <div id="top" class="baseProfile" style="display: none;">
             <div class="contact-card">
                 <!-- THIS IS THE BOOTSTRAP MODULE  -->
                 <div class="card">
@@ -216,7 +216,7 @@
             <div id="projectCard" class="card">
                 <div id="card2Header"class="card-header">
                     <div id="gitCard">
-                        <a id="gitHREF" href="https://github.com/carlitos-206" target="_blank" rel="noopener noreferrer"><img id="gitLogo" src="/img/git-hub.svg" alt="GitHub"></a>
+                        <a id="gitHREF" href="https://github.com/carlitos-206" target="_blank" rel="noopener noreferrer"><img id="gitLogo2" src="/img/git-hub.svg" alt="GitHub"></a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -233,12 +233,88 @@
                         </div>
                 </div>
         </div>
-        <div id="ytVideo">
-            
+        <div class="helloWorld">
+            <h1 id="welcomeTitle">Hello World!</h1>
         </div>
-            <!-- <div class="weatherAPI">
-                <p id="responseCity">test</p>
-            </div> -->
+        <div id="hobbiesCard" class="card">
+            <h5 class="card-header">Hobbies of mine</h5>
+            <h6>.art</h6>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="myArt" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Art I've Drawn</h5>
+                        <img src="/img/spaceDawg.JPG" alt="spaceDawg" style="width: 20em;">
+                        <p class="card-text">Dog Constellation</p>
+                        <img src="/img/mycelium.JPG" alt="mycelium" style="width: 20em">
+                        <p class="card-text">mycelium</p>
+                        <img src="/img/retro.JPG" alt="retro" style="width: 20em;">
+                        <p class="card-text">reTro</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6">
+                  <div id="chiArt"class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Art I like</h5>
+                      <img id="chiArt_1" src="" alt="ChiAPI" style="width: 20em;">
+                      <p id="chiArt_1_text" class="card-text"></p>
+                      <img id="chiArt_2" src="" alt="ChiAPI" style="width: 20em;">
+                      <p id="chiArt_2_text" class="card-text"></p>
+                      <a href="https://www.artic.edu/" class="btn btn-primary" target="_blank" rel="noopener norerferrer">Visit AIC</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6>Whenever I remember to record</h6>
+              <div id="ytCard" class="card" style="width: 55rem;">
+                <div class="card-body">
+                    <iframe id="myVid1" width="560" height="315" src="https://www.youtube.com/embed/jhtc2OW9mEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="myVid2" width="560" height="315" src="https://www.youtube.com/embed/uSJl4UiLWgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="myVid3" width="560" height="315" src="https://www.youtube.com/embed/dmxk2QSwSTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+              <h1></h1>
+              <h6>Some pics</h6>
+              <div id="lightRoomCard" class="card" style="width: 55rem;">
+                <div class="card-body">
+                    <img src="/img/bryant.jpg" alt="" style="width: 22em; position:relative; left: 5%; top: 2em;">
+                    <img src="/img/daniel.jpg" alt="" style="width: 25em; position:relative; left: 7.5%; top: 2em;">
+                    <img src="/img/bryantNDaniel.jpg" alt="" style="width: 25em; position:relative; left: 2.5%;">
+                    <img src="/img/kevin.jpg" alt="" style="width: 22em; position:relative; left: 8%; bottom: 1em;">
+                    <img src="/img/meCowboy.jpg" alt="" style="width: 50em; position:relative; left: 2.5%">
+                </div>
+              </div>
+              <h1></h1>
+              <h6>_vibe</h6>
+          </div>
+          <div class="weather">
+            <h3 id="locationWeather"></h3>
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="card" style="width: 10em;">
+                    <div class="card-body">
+                      <h5 id="Day" class="card-title"></h5>
+                      <img id="weatherIMG" src="" alt="" >
+                      <p id="temp" class="card-text"></p>
+                      <p id="mainComment" class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card" style="width: 10em;">
+                      <div class="card-body">
+                        <h5 id="2moro" class="card-title"></h5>
+                        <img id="2moroWeatherIMG" src="" alt="" >
+                        <p id="2moroTemp" class="card-text"></p>
+                        <p id="2moroMainComment" class="card-text"></p></div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        <div class="footer">
+            <h5>Thank You | <a id="topTag"href="#top">Back to Top</a></h5>
+        </div>
     </body>
     
     <script src="server.js"></script>

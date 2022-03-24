@@ -22,11 +22,11 @@ Due Date: March 24th 2022
 						-> setTimeout()
 			[Y] 1 or more API fetch() to a 3rd party API 
 				->[] Is there API KEY
-					y: 
+					[]y: 
 					    [] API KEY MUST BE TESTED 3 SEPERATE TIMES WITH DIFF PARAMS   
 					    [] Send API KEY to Professor
 					
-					n: 
+					[x]n: 
 					    [Y] TEST KEYLESS 3 SEPERATE TIMES WITH DIFF PARAMS
 			
 			[] Sets, Updates or Changes to Local Storage
@@ -38,5 +38,3 @@ Due Date: March 24th 2022
 		3. Make it LIT
 	
 
-
-						
