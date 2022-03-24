@@ -1,7 +1,12 @@
+/* This Script is meant for the initial animation */
+
+/* CSS Reset */
 * {
     margin: 0px;
     padding: 0px;
 }
+
+/* Here starts the main animation  */
 body {
     background: linear-gradient(-145deg, #699a3b, #9de73c, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -19,11 +24,15 @@ body {
         background-position: 0% 50%;
     }
 }
+
+
+/* This is the profile pic and having it be center */
 .arrival{
     display: flex;
     justify-content: center;
     width: 100%;
 }
+/* the glow animation is used for the image */
 #arrivalProfilePic{
     width: 15%;
     position: relative;
@@ -45,7 +54,7 @@ body {
     }
 }
 
-/* Arrow */
+/* Arrow being built */
 .arrow {
     z-index: +2;
     position: relative;
