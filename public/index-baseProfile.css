@@ -1,8 +1,13 @@
+/* This Script is the continuation of the arrival script */
+
+
+/* CSS Reset */
 * {
     margin: 0px;
     padding: 0px;
 }
 
+/* Side Bar inforation */
 .contact-card{
     width: fit-content;
     position: relative;
@@ -149,11 +154,6 @@
     left: 70%;
 }
 
-/* #sourceCodeTHIS{
-    position: relative;
-    top: 2em;
-    width: fit-content; */
-/* } */
 #sourceCodeTHIS{
     display: flex;
     justify-content: center;

@@ -10,12 +10,10 @@ Due Date: March 24th 2022
 		2. Must have 4-6 of the fallowing: [COUNT: 1]
 			
 			[Y] 1 or more classes
-				->[] Static Method
-				->[] Protoype Method
-				->[] optional: if(classes>1){try extend classes}
+				->[Y] Protoype Method
 			
-			[] Unit Testing: Jasmine Library
-				->[] try {npm nodet try{ npm browser}} catch{lib}
+			[Y] Unit Testing: Jasmine Library
+					Test passed pre event listeners
 
 			[Y] 1 or more timing functions
 				->[Y] setInterval() or setTimeout()
