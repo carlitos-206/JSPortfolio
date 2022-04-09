@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- cors fix -->
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +46,7 @@
     <script type="text/javascript" src="ua-parser.min.js"></script>
     <title>Carlitos</title>
 </head>
-<body>
+<body >
     <!-- This is for arrival -->
     <div class="arrivalDIV">
         <!-- Arrow -->
@@ -60,128 +62,152 @@
         <div id="top" class="baseProfile" style="display: none;">
             <div class="contact-card">
                 <!-- THIS IS THE BOOTSTRAP MODULE  -->
-                <div class="card">
-                    <img src="/img/floating-me.gif" class="card-img-top" alt="...">
+                <div class="card" id="aboutMeCard">
+                    <img id="floating_me" src="/img/floating-me.gif" class="card-img-top" alt="Profile Picture">
                     <div class="card-body">
-                        <h5 class="card-title">Carlos R. Caceres Martinez</h5>
-                        <h6>About Me:</h6>
-                        <p>Cook by day and a programmer by night.</p>
-                        <p>I am a gradute of the Coding Dojo in Bellevue, Wa. In my time there I accuquired a Full Stack Python Certification</p>
-                        <p>I am also a current student at the University of Washington where I am pursuing a Full Stack JavaScript Certification</p>
-                        <h6>Skills</h6>
-                        <div class="list-1">
-                            <ul style="position: relative; left: 10%">
-                                <li>Prep-Cook</li>
-                            </ul>
-                            <ul style="position: relative; left: 10%">
-                                <li class="category">FRONT-END</li>
-                                <ul>
-                                    <li style="position: relative; left: 5%">HTML5</li>
-                                    <li style="position: relative; left: 5%">CSS</li>
-                                    <ul style="position: relative; left: 10%">
-                                        <li>Vanilla CSS</li>
-                                        <li>Boot Strap</li>
-                                        <li>Pure CSS</li>
-                                        <li>Animate CSS</li>
-                                        <li>Tailwind CSS</li>
-                                    </ul>
-                                    <li style="position: relative; left: 5%">JavaScript</li>
-                                    <ul style="position: relative; left: 10%">
-                                        <li>Vanilla JS</li>
-                                        <li>JQuery</li>
+                        <h5 class="card-title aboutMeHead">Carlos R. Caceres Martinez</h5>
+                        <h6 class="aboutMeHead">About Me:</h6>
+                        <p class="aboutMeHead">Cook by day and a programmer by night.</p>
+                        <p class="aboutMeHead">I am a gradute of the Coding Dojo in Bellevue, Wa. In my time there I accuquired a Full Stack Python Certification</p>
+                        <p class="aboutMeHead">I am also a current student at the University of Washington where I am pursuing a Full Stack Javascript Certification</p>
+                        <div class="skills">
+
+                            <h6 class="skills">Skills</h6>
+                            <div class="list-1">
+                                <ul style="position: relative; left: 10%">
+                                    <li>Kitchen</li>
+                                    <ul>
+                                        <li style="position: relative; left: 10%" >Front of House</li>
+                                            <ul style="position: relative; left: 15%">
+                                                <li>Host</li>
+                                                <li>Busser</li>
+                                                <li>Barback</li>
+                                                <li>Server</li>
+                                            </ul>
+                                        <li style="position: relative; left: 10%">Back of House</li>
+                                            <ul style="position: relative; left: 15%">
+                                                <li>DMO</li>
+                                                <li>Prep Cook</li>
+                                                <li>Line Cook</li>
+                                            </ul>
                                     </ul>
                                 </ul>
-                            </ul>
-                            </div>
-                                <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                    <div class="">
-                                        <ul style="position: relative; left: 10%">
-                                            <li class="category">BACK-END</li>
-                                            <ul>
-                                                <li style="position: relative; left: 5%">Python3</li>
-                                                <ul style="position: relative; left: 10%">
-                                                    <li>Django 2.2 + ORM</li>
-                                                    <li>Flask 2.2 + MySQL</li>
-                                                </ul>
-                                                <li style="position: relative; left: 5%">JavaScript ES6</li>
-                                                    <ul style="position: relative; left: 10%">
-                                                        <li>Node.JS + Express</li>
-                                                    </ul>
-                                                </ul>
-                                        </ul>
-                                        <ul style="position: relative; left: 10%">
-                                            <li class="category">DATABASE MANAGEMENT</li>
-                                            <ul style="position: relative; left: 5%">
-                                                <li>Relational</li>
-                                                <ul style="position: relative; left: 10%">
-                                                    <li>Python3 ORM(sqlite3)</li>
-                                                    <li>MySQL (w/ MySQL Workbench)</li>
-                                                </ul>
+                                <ul style="position: relative; left: 10%">
+                                    <li>Tech</li>
+                                    <ul>
+                                        <li class="category" style="position: relative; left: 10%">FRONT-END</li>
+                                        <ul>
+                                            <li style="position: relative; left: 15%">HTML5</li>
+                                            <li style="position: relative; left: 15%">CSS</li>
+                                            <ul style="position: relative; left: 20%">
+                                                <li>Vanilla CSS</li>
+                                                <li>Boot Strap</li>
+                                                <li>Pure CSS</li>
+                                                <li>Animate CSS</li>
+                                                <li>Tailwind CSS</li>
+                                            </ul>
+                                            <li style="position: relative; left: 15%">JavaScript</li>
+                                            <ul style="position: relative; left: 20%">
+                                                <li>Vanilla JS</li>
+                                                <li>JQuery</li>
                                             </ul>
                                         </ul>
-                                        <ul style="position: relative; left: 10%">
-                                                    <li class="category" >VERSION CONTROL</li>
-                                                    <ul style="position: relative; left: 5%">
-                                                        <li>Git Hub</li>
+                                    </ul>
+                                </ul>
+                                </div>
+                                    <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="">
+                                            <ul style="position: relative; left: 10%">
+                                                <ul>
+
+                                                    <li class="category" style="position: relative; left: 10%">BACK-END</li>
+                                                    <ul>
+                                                    <li style="position: relative; left: 15%">Python3</li>
+                                                    <ul style="position: relative; left: 20%">
+                                                        <li>Django 2.2 + ORM</li>
+                                                        <li>Flask 2.2 + MySQL</li>
+                                                    </ul>
+                                                    <li style="position: relative; left: 15%">JavaScript ES6</li>
+                                                        <ul style="position: relative; left: 20%">
+                                                            <li>Node.JS + Express</li>
+                                                        </ul>
+                                                    </ul>
+                                            </ul>
+                                            <ul style="position: relative; left: 10%">
+                                                <li class="category">DATABASE MANAGEMENT</li>
+                                                <ul style="position: relative; left: 5%">
+                                                    <li>Relational</li>
+                                                    <ul style="position: relative; left: 10%">
+                                                        <li>Python3 ORM(sqlite3)</li>
+                                                        <li>MySQL (w/ MySQL Workbench)</li>
                                                     </ul>
                                                 </ul>
-                                                <ul style="position: relative; left: 10%">
-                                                    <li class="category">DEPLOYMENT</li>
-                                                    <ul style="position: relative; left: 5%">
-                                                        <li>AWS EC2 Virtual Machine</li>
+                                            </ul>
+                                            <ul style="position: relative; left: 10%">
+                                                        <li class="category" >VERSION CONTROL</li>
                                                         <ul style="position: relative; left: 5%">
-                                                            <li>(Django) Ubuntu 18.04LTS</li>
-                                                        </ul>
-                                                        <li>Demos</li>
-                                                        <ul style="position: relative; left: 5%">
-                                                            <li>NGROK</li>
+                                                            <li>Git Hub</li>
                                                         </ul>
                                                     </ul>
-                                                </ul>
-                                                <ul style="position: relative; left: 10%">
+                                                    <ul style="position: relative; left: 10%">
+                                                        <li class="category">DEPLOYMENT</li>
+                                                        <ul style="position: relative; left: 5%">
+                                                            <li>AWS EC2 Virtual Machine</li>
+                                                            <ul style="position: relative; left: 5%">
+                                                                <li>(Django) Ubuntu 18.04LTS</li>
+                                                            </ul>
+                                                            <li>Demos</li>
+                                                            <ul style="position: relative; left: 5%">
+                                                                <li>NGROK</li>
+                                                            </ul>
+                                                        </ul>
+                                                    </ul>
+                                                    <ul style="position: relative; left: 10%">
                                                         <li>OS / SHELLS</li>
                                                         <ul style="position: relative; left: 5%">
                                                             <li>Linux</li>
                                                             <ul style="position: relative; left: 5%">
                                                                 <li>Ubuntu 18.04LTS+</li>
                                                             </ul>
-                                                            <li>OS X</li>
-                                                            <ul style="position: relative; left: 5%">
-                                                                <li>Git Bash Shell</li>
-                                                                <li>Mac OS</li>
-                                                                </ul>
-                                                            <li>Windows</li>
-                                                            <ul style="position: relative; left: 5%">
-                                                                <li>Command Prompt</li>
-                                                            </ul>
-                                                        </ul>
-                                                    </ul>
-                                                        <ul style="position: relative; left: 10%">
-                                                            <li>OTHER</li>
-                                                            <ul style="position: relative; left: 5%">
-                                                                <li>Video Editing</li>
+                                                                <li>OS X</li>
                                                                 <ul style="position: relative; left: 5%">
-                                                                    <li>Adobe Premiere Pro</li>
+                                                                    <li>Git Bash Shell</li>
+                                                                    <li>Mac OS</li>
                                                                 </ul>
-                                                                <li>Photo Editing</li>
+                                                                <li>Windows</li>
                                                                 <ul style="position: relative; left: 5%">
-                                                                    <li>Adobe Light Room</li>
-                                                                    <li>Photoleap Editor by Lighttricks (iOS)</li>
-                                                                </ul>
-                                                                <li>Drawing/Icon Making</li>
-                                                                <ul style="position: relative; left: 5%">
-                                                                    <li>Adobe Illustrator</li>
+                                                                    <li>Command Prompt</li>
                                                                 </ul>
                                                             </ul>
                                                         </ul>
+                                                            <ul style="position: relative; left: 10%">
+                                                                <li>OTHER</li>
+                                                                <ul style="position: relative; left: 5%">
+                                                                    <li>Video Editing</li>
+                                                                    <ul style="position: relative; left: 5%">
+                                                                        <li>Adobe Premiere Pro</li>
+                                                                    </ul>
+                                                                    <li>Photo Editing</li>
+                                                                    <ul style="position: relative; left: 5%">
+                                                                        <li>Adobe Light Room</li>
+                                                                        <li>Photoleap Editor by Lighttricks (iOS)</li>
+                                                                    </ul>
+                                                                    <li>Drawing/Icon Making</li>
+                                                                    <ul style="position: relative; left: 5%">
+                                                                        <li>Adobe Illustrator</li>
+                                                                    </ul>
+                                                                </ul>
+                                                            </ul>
+                                                </ul>
+                                        </div>
                                     </div>
-                                </div>
+                            </div>
                             <div class="card-header" id="headingOne">
-                                <a href= "#" id="btn-text" style="display: flex; justify-content:flex-end;">Load More</a>
+                                <a id="btn-text" style="display: flex; justify-content:flex-end;">Load More</a>
                             </div>
                         </div>
                         <div class="card-body">
-                            <a id="dmOpener" href="#" class="card-link"  style="display: flex; justify-content:center;">Send Direct Message</a>
+                            <a id="resume" href="/Resume.pdf" class="card-link"  style="display: flex; justify-content:center;" download>Download Full Resume</a>
                         </div>
                     </div>
                 </div>
@@ -225,10 +251,10 @@
                 </div>
                 <div class="card-body">
                         <div class="projectBtns">
-                            <a href="https://github.com/carlitos-206/first-app" target="_blank" rel="noopener norerferrer"><button id="gitBtn1" type="button" class="btn btn-dark"> first-app </button></a>
-                            <a href="https://github.com/carlitos-206/useragent-Django2.2" target="_blank" rel="noopener norerferrer"><button id="gitBtn2" type="button" class="btn btn-dark">useragent-Django2.2</button></a>
-                            <a href="https://github.com/carlitos-206/js-browser-game-django" target="_blank" rel="noopener norerferrer"><button id="gitBtn3" type="button" class="btn btn-dark">js-browser-game-django</button></a>
-                            <a href="https://github.com/carlitos-206/mainPortfolio" target="_blank" rel="noopener norerferrer"><button id="gitBtn4" type="button" class="btn btn-dark">mainPortfolio</button></a>
+                            <a id="firsAPPLink" href="https://github.com/carlitos-206/first-app" target="_blank" rel="noopener norerferrer"><button id="gitBtn1" type="button" class="btn btn-dark"> first-app </button></a>
+                            <a  id="userAgentLink"href="https://github.com/carlitos-206/useragent-Django2.2" target="_blank" rel="noopener norerferrer"><button id="gitBtn2" type="button" class="btn btn-dark">useragent-Django2.2</button></a>
+                            <a id="jsBrowserGameLink"href="https://github.com/carlitos-206/js-browser-game-django" target="_blank" rel="noopener norerferrer"><button id="gitBtn3" type="button" class="btn btn-dark">js-browser-game-django</button></a>
+                            <a id="pythonPortfolioLink" href="https://github.com/carlitos-206/mainPortfolio" target="_blank" rel="noopener norerferrer"><button id="gitBtn4" type="button" class="btn btn-dark">mainPortfolio</button></a>
                             <p id="depricatedGIT">(Depricated)</p>
                         </div>
                         <div id="sourceCodeTHIS">
@@ -249,11 +275,11 @@
                     <div id="myArt" class="card">
                     <div class="card-body">
                         <h5 class="card-title">Art I've Drawn</h5>
-                        <img src="/img/spaceDawg.JPG" alt="spaceDawg" style="width: 20em;">
+                        <img class="my_drawings" src="/img/spaceDawg.JPG" alt="spaceDawg">
                         <p class="card-text">Dog Constellation</p>
-                        <img src="/img/mycelium.JPG" alt="mycelium" style="width: 20em">
+                        <img class="my_drawings" src="/img/mycelium.JPG" alt="mycelium">
                         <p class="card-text">mycelium</p>
-                        <img src="/img/retro.JPG" alt="retro" style="width: 20em;">
+                        <img class="my_drawings" src="/img/retro.JPG" alt="retro">
                         <p class="card-text">reTro</p>
                     </div>
                 </div>
@@ -262,95 +288,53 @@
                   <div id="chiArt"class="card">
                     <div class="card-body">
                       <h5 class="card-title">Art I like</h5>
-                      <img id="chiArt_1" src="" alt="ChiAPI" style="width: 20em;">
-                      <p id="chiArt_1_text" class="card-text"></p>
-                      <img id="chiArt_2" src="" alt="ChiAPI" style="width: 20em;">
+                      <img id="chiArt_1" class="chiTown_art" src="" alt="ChiAPI" >
+                      <p id="chiArt_1_text"  class="card-text"></p>
+                      <img id="chiArt_2" class="chiTown_art" src="" alt="ChiAPI" >
                       <p id="chiArt_2_text" class="card-text"></p>
-                      <a href="https://www.artic.edu/" class="btn btn-primary" target="_blank" rel="noopener norerferrer">Visit AIC</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <h6>Whenever I remember to record</h6>
-              <div id="ytCard" class="card" style="width: 55rem;">
+              <h6 id="ytTitle">Whenever I remember to record</h6>
+              <div id="ytCard" class="card">
                 <div class="card-body">
-                    <iframe id="myVid1" width="560" height="315" src="https://www.youtube.com/embed/jhtc2OW9mEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe id="myVid2" width="560" height="315" src="https://www.youtube.com/embed/uSJl4UiLWgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe id="myVid3" width="560" height="315" src="https://www.youtube.com/embed/dmxk2QSwSTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe id="myVid1" width="560" height="315" src="https://www.youtube.com/embed/jhtc2OW9mEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe id="myVid2" width="560" height="315" src="https://www.youtube.com/embed/uSJl4UiLWgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe id="myVid3" width="560" height="315" src="https://www.youtube.com/embed/dmxk2QSwSTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <h1></h1>
               <h6>Some pics</h6>
-              <div id="lightRoomCard" class="card" style="width: 55rem;">
+              <div id="lightRoomCard" class="card">
                 <div class="card-body">
-                    <img src="/img/bryant.jpg" alt="" style="width: 22em; position:relative; left: 5%; top: 2em;">
-                    <img src="/img/daniel.jpg" alt="" style="width: 25em; position:relative; left: 7.5%; top: 2em;">
-                    <img src="/img/bryantNDaniel.jpg" alt="" style="width: 25em; position:relative; left: 2.5%;">
-                    <img src="/img/kevin.jpg" alt="" style="width: 22em; position:relative; left: 8%; bottom: 1em;">
-                    <img src="/img/meCowboy.jpg" alt="" style="width: 50em; position:relative; left: 2.5%">
+                    <img id="pic_1" src="/img/bryant.jpg" alt="Bryant Picture using Adobe Light Room">
+                    <img id="pic_2" src="/img/daniel.jpg" alt="Daniel Picture using Adobe Light Room">
+                    <img id="pic_3" src="/img/bryantNDaniel.jpg" alt="Bryant and Danie using Adobe Ligth Room">
+                    <img id="pic_4" src="/img/kevin.jpg" alt="Kevin Picture using Adobe Light Room" >
+                    <img id="pic_5" src="/img/meCowboy.jpg" alt="Carlos Picture using Photoleap Editor by Lighttricks (iOS)" >
                 </div>
               </div>
               <h1></h1>
-              <h6 style="position: relative; left: 1%;">&#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335; </h6>
+              <h6 id="cacti">&#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335; </h6>
           </div>
           <div class="weather">
             <h3 id="locationWeather"></h3>
             <div class="row">
                 <div class="col-sm-6">
-                  <div class="card" style="width: 10em;">
+                  <div class="card">
                     <div class="card-body">
                       <h5 id="Day" class="card-title"></h5>
                       <img id="weatherIMG" src="" alt="" >
                       <p id="temp" class="card-text"></p>
                       <p id="mainComment" class="card-text"></p>
                     </div>
-                  </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card" style="width: 10em;">
-                      <div class="card-body">
-                        <h5 id="2moro" class="card-title"></h5>
-                        <img id="2moroWeatherIMG" src="" alt="" >
-                        <p id="2moroTemp" class="card-text"></p>
-                        <p id="2moroMainComment" class="card-text"></p></div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-          <!-- DM Form -->
-          <div id="mainForm" class="dmForm card" style="display: none;">
-              <div class="card-body">
-                  <form style="position: relative; left:1%;" name="emailForm" id="theForm" action="#">
-                    <!-- in theory the CSRF token would be here -->
-                    <div class="form-group w-50">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" name="email" placeholder="name@example.com">
-                      </div>
-                      <div class="form-group w-50">
-                        <label for="exampleFormControlInput2">First Name</label>
-                        <input type="text" class="form-control" name="fname" placeholder="Enter First Name">
-                        <label for="exampleFormControlInput3">Last Name</label>
-                        <input type="text" class="form-control" name="lname"  placeholder="Enter Last Name">
-                      </div>
-                      <div class="form-group w-25">
-                        <label for="exampleFormControlSelect1">Reason For Contact</label>
-                        <select class="form-control" name="reasonField" >
-                          <option value="">Choose One</option>
-                          <option value="Job">Job Oppurtunity</option>
-                          <option value="Connection">Lets Connect</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Message</label>
-                        <textarea class="form-control" rows="3" name="messageField"></textarea>
-                      </div>
-                    <button style="position:relative; bottom: .8em; left: 5%;" id="closeForm" type="button" class="btn btn-danger">Cancel</button>
-                    <button style="position:relative; bottom: .8em; left: 60%;" name="submitBTN" id ="submitForm" type="submit" class="btn btn-success">Send Message</button>
-                    </form>
-                    <iframe id="randomGIF"src="https://giphy.com/embed/tBm5R4qHDM2c0" width="480" height="408" frameBorder="0" ></iframe><p></p>
-
-              </div>
-                
+            </div>
+        </div>
+        <div class="user_city">
+            <p id="user_location"></p>
+        </div>
           </div>
         <div class="footer">
             <h5>Thank You | <a id="topTag"href="#top">Back to Top</a></h5>
