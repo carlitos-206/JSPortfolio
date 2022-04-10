@@ -33,9 +33,6 @@ app.get('/', (request, response, next) => (
     
     response.render('index')
 ))
-require('dotenv').config({ path: './TEST.env'})
-
-console.log(process.env.IP_INFO_TOKEN)
 
 //app is listing on port 3000
 app.listen(3000)

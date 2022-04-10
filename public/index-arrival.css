@@ -6,10 +6,11 @@
     padding: 0px;
 }
 
+
 /* Small phones like Iphone 5 SE */
 @media screen and (max-width:375px) {
     body {
-        background: linear-gradient(-145deg, #699a3b, #9de73c, #23a6d5, #23d5ab);
+        background: linear-gradient(-145deg, #699a3b, #9de73c, #5d28a7dc, #23d5ab);
         background-size: 500% 500%;
         animation: gradient 5s ease infinite;
     }
@@ -18,10 +19,10 @@
             background-position: 0% 50%;
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 0% 0%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 50% 50%;
         }
     }
     
@@ -54,65 +55,7 @@
         }
     }
     
-    /* Arrow being built */
-    .arrow {
-        z-index: +2;
-        position: relative;
-        margin: 0 auto;
-        width: 10em;
-        transform: rotate(65deg);
-        position: relative;
-        left: 68%;
-        top: -3vh;
-    }
-    
-    .arrow .curve {
-        z-index: +2;
-        border: 10px solid #318ba1;
-        border-color: transparent transparent transparent #318ba1;
-        height: 365px;
-        width: 500px;
-        border-radius: 230px 0 0 150px;
-    }
-    
-    .arrow .point {
-        z-index: +2;
-        position: absolute;
-        left: 30px;
-        top: 310px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
-    
-    .arrow .point:before, .arrow .point:after {
-        border: 15px solid #318ba1;
-        height: 55px;
-        content: "";
-        position: absolute;
-        z-index: +2;
-    }
-    
-    .arrow .point:before {
-        top: -11px;
-        z-index: +2;
-        left: -11px;
-        transform:rotate(-74deg);
-        -webkit-transform:rotate(-74deg);
-        -moz-transform:rotate(-74deg);
-        -ms-transform: rotate(-74deg);
-    }
-    
-    .arrow .point:after {
-        z-index: +2;
-        top: -20px;
-        left: 5px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
+
     
 }
 
@@ -133,8 +76,8 @@
 /* Iphone X Dimension */
 @media only screen and (min-width:376px){
     body {
-        background: linear-gradient(-145deg, #699a3b, #9de73c, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
+        background: linear-gradient(-145deg, #699a3b, #9de73c, #5d28a7dc, #23d5ab);
+        background-size: 500% 500%;
         animation: gradient 5s ease infinite;
     }
     @keyframes gradient {
@@ -142,10 +85,10 @@
             background-position: 0% 50%;
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 0% 0%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 50% 50%;
         }
     }
     
@@ -178,65 +121,6 @@
         }
     }
     
-    /* Arrow being built */
-    .arrow {
-        z-index: +2;
-        position: relative;
-        margin: 0 auto;
-        width: 10em;
-        transform: rotate(65deg);
-        position: relative;
-        left: 68%;
-        top: -3vh;
-    }
-    
-    .arrow .curve {
-        z-index: +2;
-        border: 10px solid #318ba1;
-        border-color: transparent transparent transparent #318ba1;
-        height: 365px;
-        width: 500px;
-        border-radius: 230px 0 0 150px;
-    }
-    
-    .arrow .point {
-        z-index: +2;
-        position: absolute;
-        left: 30px;
-        top: 310px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
-    
-    .arrow .point:before, .arrow .point:after {
-        border: 15px solid #318ba1;
-        height: 55px;
-        content: "";
-        position: absolute;
-        z-index: +2;
-    }
-    
-    .arrow .point:before {
-        top: -11px;
-        z-index: +2;
-        left: -11px;
-        transform:rotate(-74deg);
-        -webkit-transform:rotate(-74deg);
-        -moz-transform:rotate(-74deg);
-        -ms-transform: rotate(-74deg);
-    }
-    
-    .arrow .point:after {
-        z-index: +2;
-        top: -20px;
-        left: 5px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
 }
 
 
@@ -247,7 +131,7 @@
 /* tablet portrait */
 @media only screen and (min-width:768px){
     body {
-        background: linear-gradient(-145deg, #699a3b, #9de73c, #23a6d5, #23d5ab);
+        background: linear-gradient(-145deg, #699a3b, #9de73c, #5d28a7dc, #23d5ab);
         background-size: 500% 500%;
         animation: gradient 5s ease infinite;
     }
@@ -256,13 +140,12 @@
             background-position: 0% 50%;
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 0% 0%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 50% 50%;
         }
     }
-    
     
     /* This is the profile pic and having it be center */
     .arrival{
@@ -292,72 +175,14 @@
         }
     }
     
-    /* Arrow being built */
-    .arrow {
-        z-index: +2;
-        position: relative;
-        margin: 0 auto;
-        width: 10em;
-        transform: rotate(65deg);
-        position: relative;
-        left: 30%;
-        top: -3vh;
-    }
-    
-    .arrow .curve {
-        z-index: +2;
-        border: 10px solid #318ba1;
-        border-color: transparent transparent transparent #318ba1;
-        height: 365px;
-        width: 500px;
-        border-radius: 230px 0 0 150px;
-    }
-    
-    .arrow .point {
-        z-index: +2;
-        position: absolute;
-        left: 30px;
-        top: 310px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
-    
-    .arrow .point:before, .arrow .point:after {
-        border: 15px solid #318ba1;
-        height: 55px;
-        content: "";
-        position: absolute;
-        z-index: +2;
-    }
-    
-    .arrow .point:before {
-        top: -11px;
-        z-index: +2;
-        left: -11px;
-        transform:rotate(-74deg);
-        -webkit-transform:rotate(-74deg);
-        -moz-transform:rotate(-74deg);
-        -ms-transform: rotate(-74deg);
-    }
-    
-    .arrow .point:after {
-        z-index: +2;
-        top: -20px;
-        left: 5px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
+   
 }
 
 
 /* tablet landscape / small monitors */ 
 @media only screen and (min-width:1024px){
     body {
-        background: linear-gradient(-145deg, #699a3b, #9de73c, #23a6d5, #23d5ab);
+        background: linear-gradient(-145deg, #699a3b, #9de73c, #5d28a7dc, #23d5ab);
         background-size: 500% 500%;
         animation: gradient 5s ease infinite;
     }
@@ -366,13 +191,12 @@
             background-position: 0% 50%;
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 0% 0%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 50% 50%;
         }
     }
-    
     
     /* This is the profile pic and having it be center */
     .arrival{
@@ -402,65 +226,7 @@
         }
     }
     
-    /* Arrow being built */
-    .arrow {
-        z-index: +2;
-        position: relative;
-        margin: 0 auto;
-        width: 10em;
-        transform: rotate(65deg);
-        position: relative;
-        left: 30%;
-        top: -3vh;
-    }
     
-    .arrow .curve {
-        z-index: +2;
-        border: 10px solid #318ba1;
-        border-color: transparent transparent transparent #318ba1;
-        height: 365px;
-        width: 500px;
-        border-radius: 230px 0 0 150px;
-    }
-    
-    .arrow .point {
-        z-index: +2;
-        position: absolute;
-        left: 30px;
-        top: 310px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
-    
-    .arrow .point:before, .arrow .point:after {
-        border: 15px solid #318ba1;
-        height: 55px;
-        content: "";
-        position: absolute;
-        z-index: +2;
-    }
-    
-    .arrow .point:before {
-        top: -11px;
-        z-index: +2;
-        left: -11px;
-        transform:rotate(-74deg);
-        -webkit-transform:rotate(-74deg);
-        -moz-transform:rotate(-74deg);
-        -ms-transform: rotate(-74deg);
-    }
-    
-    .arrow .point:after {
-        z-index: +2;
-        top: -20px;
-        left: 5px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
 }
 
 
@@ -471,7 +237,7 @@
 /*Small Monitor Screen */
 @media only screen and (min-width:1280px){
     body {
-        background: linear-gradient(-145deg, #699a3b, #9de73c, #23a6d5, #23d5ab);
+        background: linear-gradient(-145deg, #699a3b, #9de73c, #5d28a7dc, #23d5ab);
         background-size: 500% 500%;
         animation: gradient 5s ease infinite;
     }
@@ -480,10 +246,10 @@
             background-position: 0% 50%;
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 0% 0%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 50% 50%;
         }
     }
     
@@ -516,65 +282,7 @@
         }
     }
     
-    /* Arrow being built */
-    .arrow {
-        z-index: +2;
-        position: relative;
-        margin: 0 auto;
-        width: 10em;
-        transform: rotate(65deg);
-        position: relative;
-        left: 30%;
-        top: -3vh;
-    }
-    
-    .arrow .curve {
-        z-index: +2;
-        border: 10px solid #318ba1;
-        border-color: transparent transparent transparent #318ba1;
-        height: 365px;
-        width: 500px;
-        border-radius: 230px 0 0 150px;
-    }
-    
-    .arrow .point {
-        z-index: +2;
-        position: absolute;
-        left: 30px;
-        top: 310px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
-    
-    .arrow .point:before, .arrow .point:after {
-        border: 15px solid #318ba1;
-        height: 55px;
-        content: "";
-        position: absolute;
-        z-index: +2;
-    }
-    
-    .arrow .point:before {
-        top: -11px;
-        z-index: +2;
-        left: -11px;
-        transform:rotate(-74deg);
-        -webkit-transform:rotate(-74deg);
-        -moz-transform:rotate(-74deg);
-        -ms-transform: rotate(-74deg);
-    }
-    
-    .arrow .point:after {
-        z-index: +2;
-        top: -20px;
-        left: 5px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
+
 }
 
 
@@ -582,7 +290,7 @@
 /* medium monitors */
 @media only screen and (min-width:1440px){
     body {
-        background: linear-gradient(-145deg, #699a3b, #9de73c, #23a6d5, #23d5ab);
+        background: linear-gradient(-145deg, #699a3b, #9de73c, #5d28a7dc, #23d5ab);
         background-size: 500% 500%;
         animation: gradient 5s ease infinite;
     }
@@ -591,10 +299,10 @@
             background-position: 0% 50%;
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 0% 0%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 50% 50%;
         }
     }
     
@@ -627,65 +335,7 @@
         }
     }
     
-    /* Arrow being built */
-    .arrow {
-        z-index: +2;
-        position: relative;
-        margin: 0 auto;
-        width: 10em;
-        transform: rotate(65deg);
-        position: relative;
-        left: 30%;
-        top: -3vh;
-    }
     
-    .arrow .curve {
-        z-index: +2;
-        border: 10px solid #318ba1;
-        border-color: transparent transparent transparent #318ba1;
-        height: 365px;
-        width: 500px;
-        border-radius: 230px 0 0 150px;
-    }
-    
-    .arrow .point {
-        z-index: +2;
-        position: absolute;
-        left: 30px;
-        top: 310px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
-    
-    .arrow .point:before, .arrow .point:after {
-        border: 15px solid #318ba1;
-        height: 55px;
-        content: "";
-        position: absolute;
-        z-index: +2;
-    }
-    
-    .arrow .point:before {
-        top: -11px;
-        z-index: +2;
-        left: -11px;
-        transform:rotate(-74deg);
-        -webkit-transform:rotate(-74deg);
-        -moz-transform:rotate(-74deg);
-        -ms-transform: rotate(-74deg);
-    }
-    
-    .arrow .point:after {
-        z-index: +2;
-        top: -20px;
-        left: 5px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
 }
 
 
@@ -696,7 +346,7 @@
 /* Large Monitor */
 @media only screen and (min-width:1920px){
     body {
-        background: linear-gradient(-145deg, #699a3b, #9de73c, #23a6d5, #23d5ab);
+        background: linear-gradient(-145deg, #699a3b, #9de73c, #5d28a7dc, #23d5ab);
         background-size: 500% 500%;
         animation: gradient 5s ease infinite;
     }
@@ -705,13 +355,12 @@
             background-position: 0% 50%;
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 0% 0%;
         }
         100% {
-            background-position: 0% 50%;
+            background-position: 50% 50%;
         }
     }
-    
     
     /* This is the profile pic and having it be center */
     .arrival{
@@ -741,63 +390,5 @@
         }
     }
     
-    /* Arrow being built */
-    .arrow {
-        z-index: +2;
-        position: relative;
-        margin: 0 auto;
-        width: 10em;
-        transform: rotate(65deg);
-        position: relative;
-        left: 16%;
-        top: 8vh;
-    }
     
-    .arrow .curve {
-        z-index: +2;
-        border: 10px solid #318ba1;
-        border-color: transparent transparent transparent #318ba1;
-        height: 365px;
-        width: 500px;
-        border-radius: 230px 0 0 150px;
-    }
-    
-    .arrow .point {
-        z-index: +2;
-        position: absolute;
-        left: 30px;
-        top: 310px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
-    
-    .arrow .point:before, .arrow .point:after {
-        border: 15px solid #318ba1;
-        height: 55px;
-        content: "";
-        position: absolute;
-        z-index: +2;
-    }
-    
-    .arrow .point:before {
-        top: -11px;
-        z-index: +2;
-        left: -11px;
-        transform:rotate(-74deg);
-        -webkit-transform:rotate(-74deg);
-        -moz-transform:rotate(-74deg);
-        -ms-transform: rotate(-74deg);
-    }
-    
-    .arrow .point:after {
-        z-index: +2;
-        top: -20px;
-        left: 5px;
-        transform:rotate(12deg);
-        -webkit-transform: rotate(12deg);
-        -moz-transform:rotate(12deg);
-        -ms-transform: rotate(12deg);
-    }
 }

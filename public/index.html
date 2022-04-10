@@ -10,7 +10,6 @@
     <!-- CSS Scripts Custom -->
     <link  rel="stylesheet" href="index-arrival.css">
     <link rel="stylesheet" href="index-baseProfile.css">
-    <link rel="stylesheet" href="validation.css">
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- to edit bootstrap some time only works on the html file -->
@@ -38,22 +37,15 @@
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
     <!-- animate.css Framework -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- Tailwind CSS Conflicts with BootStrap-->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- DB connections #not working only keeping for future reference-->
     <script src="util/database.js"></script>
     <!-- UA Parser Script(SCRIPT MUST BE AT SAME LEVEL AS HTML) but also requires npm zepto we can parse the info in the uwReqs.js script with JQuery-->
     <script type="text/javascript" src="ua-parser.min.js"></script>
     <title>Carlitos</title>
 </head>
-<body >
+<body>
     <!-- This is for arrival -->
     <div class="arrivalDIV">
-        <!-- Arrow -->
-        <div class="arrow" style="display: none;">
-            <div class="curve"></div>
-            <div class="point"></div>
-        </div> 
         <!-- Profile IMG  -->
         <img id="arrivalProfilePic" src="/img/bio.jpg" alt="Profile IMG">
     </div>
@@ -65,7 +57,7 @@
                 <div class="card" id="aboutMeCard">
                     <img id="floating_me" src="/img/floating-me.gif" class="card-img-top" alt="Profile Picture">
                     <div class="card-body">
-                        <h5 class="card-title aboutMeHead">Carlos R. Caceres Martinez</h5>
+                        <h5 id="engineer" class="card-title aboutMeHead">Carlos R. Cáceres Martínez</h5>
                         <h6 class="aboutMeHead">About Me:</h6>
                         <p class="aboutMeHead">Cook by day and a programmer by night.</p>
                         <p class="aboutMeHead">I am a gradute of the Coding Dojo in Bellevue, Wa. In my time there I accuquired a Full Stack Python Certification</p>
@@ -77,16 +69,16 @@
                                 <ul style="position: relative; left: 10%">
                                     <li>Kitchen</li>
                                     <ul>
-                                        <li style="position: relative; left: 10%" >Front of House</li>
+                                        <li style="position: relative; left: 10%" >Front-of-House</li>
                                             <ul style="position: relative; left: 15%">
                                                 <li>Host</li>
                                                 <li>Busser</li>
                                                 <li>Barback</li>
                                                 <li>Server</li>
                                             </ul>
-                                        <li style="position: relative; left: 10%">Back of House</li>
+                                        <li style="position: relative; left: 10%">Back-of-House</li>
                                             <ul style="position: relative; left: 15%">
-                                                <li>DMO</li>
+                                                <li>Dishwasher</li>
                                                 <li>Prep Cook</li>
                                                 <li>Line Cook</li>
                                             </ul>
@@ -95,7 +87,7 @@
                                 <ul style="position: relative; left: 10%">
                                     <li>Tech</li>
                                     <ul>
-                                        <li class="category" style="position: relative; left: 10%">FRONT-END</li>
+                                        <li class="category" style="position: relative; left: 10%">Front-end</li>
                                         <ul>
                                             <li style="position: relative; left: 15%">HTML5</li>
                                             <li style="position: relative; left: 15%">CSS</li>
@@ -106,7 +98,7 @@
                                                 <li>Animate CSS</li>
                                                 <li>Tailwind CSS</li>
                                             </ul>
-                                            <li style="position: relative; left: 15%">JavaScript</li>
+                                            <li style="position: relative; left: 15%">Javascript</li>
                                             <ul style="position: relative; left: 20%">
                                                 <li>Vanilla JS</li>
                                                 <li>JQuery</li>
@@ -120,7 +112,7 @@
                                             <ul style="position: relative; left: 10%">
                                                 <ul>
 
-                                                    <li class="category" style="position: relative; left: 10%">BACK-END</li>
+                                                    <li class="category" style="position: relative; left: 10%">Back-end</li>
                                                     <ul>
                                                     <li style="position: relative; left: 15%">Python3</li>
                                                     <ul style="position: relative; left: 20%">
@@ -258,7 +250,7 @@
                             <p id="depricatedGIT">(Depricated)</p>
                         </div>
                         <div id="sourceCodeTHIS">
-                            <a href="https://github.com/carlitos-206/JSPortfolio" target="_blank" rel="noopener norerferrer"><button id="gitBtn5" type="button" class="btn btn-dark">JSPortfolio</button></a>
+                            <a id="JSPortfolioLink" href="https://github.com/carlitos-206/JSPortfolio" target="_blank" rel="noopener norerferrer"><button id="gitBtn5" type="button" class="btn btn-dark">JSPortfolio</button></a>
                         </div>
                 </div>
         </div>
@@ -318,12 +310,13 @@
               <h1></h1>
               <h6 id="cacti">&#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335; &#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335;&#127797; &#x1F335; </h6>
           </div>
+
+        <!-- Weather section -->
           <div class="weather">
-            <h3 id="locationWeather"></h3>
             <div class="row">
                 <div class="col-sm-6">
                   <div class="card">
-                    <div class="card-body">
+                    <div id="weatherInfo" class="card-body">
                       <h5 id="Day" class="card-title"></h5>
                       <img id="weatherIMG" src="" alt="" >
                       <p id="temp" class="card-text"></p>
@@ -336,12 +329,14 @@
             <p id="user_location"></p>
         </div>
           </div>
+
+          <!-- Footer -->
         <div class="footer">
             <h5>Thank You | <a id="topTag"href="#top">Back to Top</a></h5>
         </div>
     </body>
     <!-- The server script -->
     <script src="server.js"></script>
-    <!-- This is the script for UW Course 1: PROGRAMMING FOR THE BROWSER WITH JAVASCRIPT REG # 198491 -->
-    <script src="uwReqs.js"></script>
+    <!-- this is the main script  -->
+    <script src="index.js"></script>
     </html>
