@@ -10,10 +10,31 @@ const lofiMusic = document.getElementById("lofiMusic")
 const iframe = document.querySelector('iframe')
 const gitLogo = document.getElementById('gitLogo')
 const projectGitLogo = document.getElementById('gitLogo2')
-
+const desktopOnly = document.getElementsByClassName('desktopBonus')[0]
 
 // This function allows to enter the site (ie load the page API information)
 const enterSite = ()=>{
+    // checks screen width to give bonus photo
+    if(screen.width<1279){
+        arrivalDIV.setAttribute('style', 'display:none')
+        baseProfile.setAttribute('style', 'display:block')
+        setTimeout(()=>{
+            gitLogo.setAttribute('class', 'animate__animated animate__bounce')
+            }, 2000)
+        setTimeout(()=>{
+                projectGitLogo.setAttribute('class', 'animate__animated animate__bounce')
+            }, 4000)
+    }else{
+        arrivalDIV.setAttribute('style', 'display:block')
+        baseProfile.setAttribute('style', 'display:block')
+        desktopOnly.setAttribute('style', 'display:block')
+        setTimeout(()=>{
+            gitLogo.setAttribute('class', 'animate__animated animate__bounce')
+            }, 2000)
+        setTimeout(()=>{
+                projectGitLogo.setAttribute('class', 'animate__animated animate__bounce')
+            }, 4000)
+    }
     arrivalDIV.setAttribute('style', 'display:none')
     baseProfile.setAttribute('style', 'display:block')
     setTimeout(()=>{
@@ -71,76 +92,76 @@ const lofi = (e)=>{
 // listen for click on the fish
 fish.addEventListener('click', (e)=>{lofi() }) 
 
-// // This promise pulls Public IP to deliver the weather using the city location of the Public IP
-// const mainPromise = new Promise((resolve, reject)=>{
-//         // this is the JQuery Function - ensure the Jquery CDN is loaded, npm Zepto is installed and npm ua-parser-js
-//         $.get("https://ipinfo.io?token=dee75a3cf2a745", function(response) { 
-//             console.log(response)
-//             if(response){
-//                 // The response is a JSON object
-//                 resolve(response)
-//             }else{
-//                 // if the API fails to get the Public IP than set the default to Seattle
-//                 reject("Seattle")
-//             }
-//         }, "json")
-//     })
+// This promise pulls Public IP to deliver the weather using the city location of the Public IP
+const mainPromise = new Promise((resolve, reject)=>{
+        // this is the JQuery Function - ensure the Jquery CDN is loaded, npm Zepto is installed and npm ua-parser-js
+        $.get("https://ipinfo.io?token=dee75a3cf2a745", function(response) { 
+            console.log(response)
+            if(response){
+                // The response is a JSON object
+                resolve(response)
+            }else{
+                // if the API fails to get the Public IP than set the default to Seattle
+                reject("Seattle")
+            }
+        }, "json")
+    })
     
-//     // Promise resolution
-//     mainPromise
-//     //the promise was succesful therefor we initiate the Weather API pulling
-//     .then((message)=>{
-//         // this parses the response since its a object
-//         let city = message.city
-//         // this is the constructed API URL that's being fetch with the response.city
-//         let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c1addeadcdb16b6bb6dffad21b497301`
+    // Promise resolution
+    mainPromise
+    //the promise was succesful therefor we initiate the Weather API pulling
+    .then((message)=>{
+        // this parses the response since its a object
+        let city = message.city
+        // this is the constructed API URL that's being fetch with the response.city
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c1addeadcdb16b6bb6dffad21b497301`
         
-//         //DOM elements to pass the weather info (for today()) 
-//         let thisDay = document.getElementById('Day');
-//         let thisIMG = document.getElementById('weatherIMG')
-//         let thisTemp = document.getElementById('temp')
-//         let thisComment = document.getElementById('mainComment')
-//         let userLocation = document.getElementById('user_location')
-//         userLocation.textContent = message.city
+        //DOM elements to pass the weather info (for today()) 
+        let thisDay = document.getElementById('Day');
+        let thisIMG = document.getElementById('weatherIMG')
+        let thisTemp = document.getElementById('temp')
+        let thisComment = document.getElementById('mainComment')
+        let userLocation = document.getElementById('user_location')
+        userLocation.textContent = message.city
 
-//         // fetch the url with the new param with the resolver promise
-//         fetch(url)
-//         .then(res=>res.json())
-//         .then(json=>{
-//             const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-//             let day = new Date()
-//             // the response of the API 
-//             thisDay.textContent = weekDays[day.getDay()]
-//                 thisIMG.setAttribute('src', json.weather[0].icon)
-//                 thisTemp.textContent = `
-//                 ${((json.main.temp - 273.15)*(9/5)+32).toFixed(2)}°F
-//                 ${((json.main.temp - 273.15)).toFixed(2)}°C `
-//                 thisComment.textContent = json.weather[0].description
-//                 let current_temp = ((json.main.temp - 273.15)*(9/5)+32).toFixed(2)
-//                 console.log(json)
-//             })
-//         })
-//         // if the promise rejects then set the default to Seattle
-//     .catch((message)=>{
-//             let city = message
-//             let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c1addeadcdb16b6bb6dffad21b497301`
-//             console.log(url)
-//             fetch(url)
-//             .then(res=>res.json())
-//             .then(json=>{
-//             const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-//             let day = new Date()
-//             // the response of the API  if the promise rejects
-//             thisDay.textContent = weekDays[day.getDay()]
-//                 thisIMG.setAttribute('src', json.weather[0].icon)
-//                 thisTemp.textContent = `
-//                 ${((json.main.temp - 273.15)*(9/5)+32).toFixed(2)}°F
-//                 ${((json.main.temp - 273.15)).toFixed(2)}°C `
-//                 thisComment.textContent = json.weather[0].description
-//                 let current_temp = ((json.main.temp - 273.15)*(9/5)+32).toFixed(2)
-//                 console.log(json)
-//             })
-// })
+        // fetch the url with the new param with the resolver promise
+        fetch(url)
+        .then(res=>res.json())
+        .then(json=>{
+            const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            let day = new Date()
+            // the response of the API 
+            thisDay.textContent = weekDays[day.getDay()]
+                thisIMG.setAttribute('src', json.weather[0].icon)
+                thisTemp.textContent = `
+                ${((json.main.temp - 273.15)*(9/5)+32).toFixed(2)}°F
+                ${((json.main.temp - 273.15)).toFixed(2)}°C `
+                thisComment.textContent = json.weather[0].description
+                let current_temp = ((json.main.temp - 273.15)*(9/5)+32).toFixed(2)
+                console.log(json)
+            })
+        })
+        // if the promise rejects then set the default to Seattle
+    .catch((message)=>{
+            let city = message
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c1addeadcdb16b6bb6dffad21b497301`
+            console.log(url)
+            fetch(url)
+            .then(res=>res.json())
+            .then(json=>{
+            const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            let day = new Date()
+            // the response of the API  if the promise rejects
+            thisDay.textContent = weekDays[day.getDay()]
+                thisIMG.setAttribute('src', json.weather[0].icon)
+                thisTemp.textContent = `
+                ${((json.main.temp - 273.15)*(9/5)+32).toFixed(2)}°F
+                ${((json.main.temp - 273.15)).toFixed(2)}°C `
+                thisComment.textContent = json.weather[0].description
+                let current_temp = ((json.main.temp - 273.15)*(9/5)+32).toFixed(2)
+                console.log(json)
+            })
+})
 
 // Local Storage Creation
 
